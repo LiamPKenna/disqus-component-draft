@@ -1,7 +1,7 @@
 import React from "react";
 import { DiscussionEmbed } from "disqus-react";
 
-const DisqusReactBox = props => {
+const DisqusEmbed = props => {
   const { websiteName, pageUrl, blockTitle } = props;
 
   const disqusConfig = {
@@ -13,4 +13,4 @@ const DisqusReactBox = props => {
   return <DiscussionEmbed shortname={websiteName} config={disqusConfig} />;
 };
 
-export default DisqusReactBox;
+export default DisqusEmbed;

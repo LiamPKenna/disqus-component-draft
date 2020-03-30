@@ -1,5 +1,4 @@
 import React from 'react';
-// import DisqusBox from './components/DisqusBox';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import DisqusEmbed from './components/DisqusEmbed';
 

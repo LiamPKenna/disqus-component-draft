@@ -1,6 +1,7 @@
 import React from 'react';
-import DisqusBox from './components/DisqusBox';
+// import DisqusBox from './components/DisqusBox';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import DisqusEmbed from './components/DisqusEmbed';
 
 function App() {
   const theme = createMuiTheme({
@@ -10,7 +11,7 @@ function App() {
   });
   return (
     <ThemeProvider theme={theme}>
-      <DisqusBox pageId={'testerino'} pageUrl={'https://www.testerino.com/chat'} />
+      <DisqusEmbed websiteName={'testerino'} pageUrl={'https://www.testerino.com/chat'} blockTitle={'Testing'} />
     </ThemeProvider>
   );
 }

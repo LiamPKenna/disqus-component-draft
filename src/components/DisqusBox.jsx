@@ -2,7 +2,13 @@ import React from "react";
 import Paper from "@material-ui/core/Paper";
 
 const DisqusBox = props => {
-  const { pageUrl, pageId } = props;
+  const { pageId, pageUrl } = props;
+
+  var disqus_config = function() {
+    const currentDocument = document;
+    currentDocument.url = pageUrl;
+    currentDocument.identifier = pageId;
+  };
 
   const connectDisq = () => {
     const currentDocument = document;
@@ -17,7 +23,10 @@ const DisqusBox = props => {
   return (
     <Paper>
       <div id="disqus_thread"></div>
-      <script>{connectDisq()}</script>
+      <script>
+        {connectDisq()}
+        {disqus_config()}
+      </script>
       <noscript>
         Please enable JavaScript to view the{" "}
         <a href="https://disqus.com/?ref_noscript" rel="nofollow">

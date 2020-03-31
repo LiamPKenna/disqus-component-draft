@@ -8,7 +8,8 @@ const DisqusDiv = styled(Card)({
   padding: "1rem",
   fontFamily: props => props.theme.typography.fontFamily,
   "& a": {
-    color: props => props.theme.palette.secondary[props.dark ? "light" : "dark"]
+    color: props =>
+      props.theme.palette.secondary[props.type === "dark" ? "light" : "dark"]
   }
 });
 
@@ -24,7 +25,7 @@ const DisqusEmbed = props => {
   };
 
   return (
-    <DisqusDiv theme={theme} dark={theme.palette.type === "dark"}>
+    <DisqusDiv theme={theme} type={theme.palette.type}>
       <DiscussionEmbed shortname={websiteName} config={disqusConfig} />;
     </DisqusDiv>
   );

@@ -5,10 +5,10 @@ export default {
    ...Browser,
    description,
    async title(block) {
-      return `Disqus Widget: ${block.url}`
+      return `Disqus Widget: ${block.blockTitle}`
    },
    section: 'Specialty',
    async itemTitle(block) {
-      return block.url;
+      return block.blockTitle;
    }
 };

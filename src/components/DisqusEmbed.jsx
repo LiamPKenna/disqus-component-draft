@@ -5,6 +5,8 @@ import Box from "@material-ui/core/Box";
 
 const DisqusDiv = styled(Box)({
   padding: "1rem",
+  maxWidth: "60rem",
+  margin: "0 auto",
   fontFamily: props => props.theme.typography.fontFamily,
   "& a": {
     color: props =>
@@ -25,7 +27,7 @@ const DisqusEmbed = props => {
 
   return (
     <DisqusDiv theme={theme} type={theme.palette.type}>
-      <DiscussionEmbed shortname={websiteName} config={disqusConfig} />;
+      <DiscussionEmbed shortname={websiteName} config={disqusConfig} />
     </DisqusDiv>
   );
 };

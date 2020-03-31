@@ -2,9 +2,9 @@ import React from "react";
 import { DiscussionEmbed } from "disqus-react";
 import { styled } from "@material-ui/core/styles";
 import { useTheme } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
+import Box from "@material-ui/core/Box";
 
-const DisqusDiv = styled(Card)({
+const DisqusDiv = styled(Box)({
   padding: "1rem",
   fontFamily: props => props.theme.typography.fontFamily,
   "& a": {

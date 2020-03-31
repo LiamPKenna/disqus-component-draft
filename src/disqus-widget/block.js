@@ -11,7 +11,11 @@ const DisqusEmbed = props => {
       title: blockTitle,
    };
 
-   return <DiscussionEmbed shortname={websiteName} config={disqusConfig} />;
+   return (
+      <div className={props.classes.root}>
+         <DiscussionEmbed shortname={websiteName} config={disqusConfig} />
+      </div>
+   );
 };
 
 export default ThemeLoader(

@@ -14,13 +14,13 @@ const DisqusDiv = styled(Box)({
 });
 
 const DisqusEmbed = props => {
-   const { websiteName, pageUrl, blockTitle, id } = props;
+   const { websiteName, pageUrl, blockTitle, objectId } = props;
    const theme = useTheme();
    console.log(theme);
 
    const disqusConfig = {
       url: pageUrl,
-      identifier: id,
+      identifier: objectId,
       title: blockTitle,
    };
 

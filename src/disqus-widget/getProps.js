@@ -6,6 +6,7 @@ export default async (record, object, request) => {
    return {
       module: '@sightworks/block/lib/special/disqus-widget/block',
       type: 'disqus-widget',
+      objectId: object.id,
       id,
       pageUrl,
       websiteName,

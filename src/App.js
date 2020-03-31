@@ -6,20 +6,20 @@ import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 
 function App() {
-  const theme = createMuiTheme({
-    palette: {
-      type: 'dark',
-      primary: purple,
-      secondary: green,
-    },
-  });
-  return (
-    <ThemeProvider theme={theme}>
-      <Card>
-        <DisqusEmbed websiteName={'testerino'} pageUrl={'https://www.testerino.com/chat'} blockTitle={'Testing'} />
-      </Card>
-    </ThemeProvider>
-  );
+   const theme = createMuiTheme({
+      palette: {
+         type: 'dark',
+         primary: purple,
+         secondary: green,
+      },
+   });
+   return (
+      <ThemeProvider theme={theme}>
+         <Card>
+            <DisqusEmbed websiteName={'testerino'} pageUrl={'https://www.testerino.com/chat'} blockTitle={'Testing'} />
+         </Card>
+      </ThemeProvider>
+   );
 }
 
 export default App;

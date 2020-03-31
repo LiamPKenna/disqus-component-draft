@@ -1,22 +1,9 @@
 import React from 'react';
 import { DiscussionEmbed } from 'disqus-react';
-import { useTheme, styled } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
-
-const DisqusDiv = styled(Box)({
-   padding: '1rem',
-   maxWidth: '60rem',
-   margin: '0 auto',
-   fontFamily: props => props.theme.typography.fontFamily,
-   '& a': {
-      color: props => props.theme.palette.secondary[props.type === 'dark' ? 'light' : 'dark'],
-   },
-});
+import { StyleLoader, ThemeLoader } from '@sightworks/theme';
 
 const DisqusEmbed = props => {
    const { websiteName, pageUrl, blockTitle, objectId } = props;
-   const theme = useTheme();
-   console.log(theme);
 
    const disqusConfig = {
       url: pageUrl,
@@ -24,11 +11,15 @@ const DisqusEmbed = props => {
       title: blockTitle,
    };
 
-   return (
-      <DisqusDiv theme={theme} type={theme.palette.type}>
-         <DiscussionEmbed shortname={websiteName} config={disqusConfig} />
-      </DisqusDiv>
-   );
+   return <DiscussionEmbed shortname={websiteName} config={disqusConfig} />;
 };
 
-export default DisqusEmbed;
+export default ThemeLoader(
+   StyleLoader(DisqusEmbed, theme => ({
+      root: {
+         padding: theme.spacing(1),
+         fontFamily: theme.typography.fontFamily,
+         '& a': { color: theme.palette.secondary[theme.palette.type === 'dark' ? 'light' : 'dark'] },
+      },
+   }))
+);

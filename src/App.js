@@ -1,6 +1,7 @@
 import React from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import DisqusEmbed from './components/DisqusEmbed';
+import Card from '@material-ui/core/Card';
 
 function App() {
   const theme = createMuiTheme({
@@ -10,7 +11,9 @@ function App() {
   });
   return (
     <ThemeProvider theme={theme}>
-      <DisqusEmbed websiteName={'testerino'} pageUrl={'https://www.testerino.com/chat'} blockTitle={'Testing'} />
+      <Card>
+        <DisqusEmbed websiteName={'testerino'} pageUrl={'https://www.testerino.com/chat'} blockTitle={'Testing'} />
+      </Card>
     </ThemeProvider>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { DiscussionEmbed } from "disqus-react";
-import { styled } from "@material-ui/core/styles";
-import { useTheme } from "@material-ui/core/styles";
+import { useTheme, styled } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 
 const DisqusDiv = styled(Box)({

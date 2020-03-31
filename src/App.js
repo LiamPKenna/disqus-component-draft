@@ -16,7 +16,7 @@ function App() {
    return (
       <ThemeProvider theme={theme}>
          <Card>
-            <DisqusEmbed websiteName={'testerino'} pageUrl={'https://www.testerino.com/chat'} blockTitle={'Testing'} />
+            <DisqusEmbed websiteName={'testerino'} pageUrl={'https://www.testerino.com/chat'} blockTitle={'Testing'} objectId={'1234'} />
          </Card>
       </ThemeProvider>
    );
